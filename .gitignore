@@ -161,7 +161,7 @@ cython_debug/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
+.idea/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
@@ -193,7 +193,10 @@ cython_debug/
 # .idea/artifacts
 # .idea/compiler.xml
 # .idea/jarRepositories.xml
-# .idea/modules.xml
+ .idea/modules.xml
+ .idea/vcs.xml
+ .idea/misc.xml
+ .idea/profiles_settings.xml
 # .idea/*.iml
 # .idea/modules
 # *.iml
