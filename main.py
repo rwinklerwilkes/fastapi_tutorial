@@ -41,7 +41,7 @@ def read_albums(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     return albums
 
 
-@app.get('/albums/artists/{artist_name}', response_model=schemas.ArtistAlbum)
+@app.get('/albums/artists/{artist_name}', response_model=list[schemas.ArtistAlbum])
 def read_artists(artist_name: str, skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     albums = crud.get_albums_by_artist(db, artist_name=artist_name, skip=skip, limit=limit)
     return albums
