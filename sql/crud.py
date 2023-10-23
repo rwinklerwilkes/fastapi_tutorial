@@ -22,7 +22,7 @@ def get_albums(db:Session, skip:int = 0, limit:int = 100):
     return db.query(models.Album).offset(skip).limit(limit).all()
 
 def get_albums_by_artist(db: Session, artist_name: str, skip:int = 0, limit:int = 100):
-    q = (db.query(models.Artist, models.Album)
+    q = (db.query(models.Artist.ArtistId, models.Artist.Name, models.Album.Title)
          .filter(models.Artist.ArtistId == models.Album.ArtistId)
          .filter(models.Artist.Name == artist_name)
          .offset(skip)

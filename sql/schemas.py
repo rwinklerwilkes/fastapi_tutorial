@@ -24,3 +24,11 @@ class Artist(ArtistBase):
 
     class Config:
         orm_mode = True
+
+class ArtistAlbum(BaseModel):
+    ArtistId: int
+    Name: str
+    Title: str
+
+    class Config:
+        orm_mode=True
