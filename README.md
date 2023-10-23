@@ -1,0 +1,1 @@
+Sample project to learn fastapi
